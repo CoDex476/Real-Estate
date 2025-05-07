@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     "pages.apps.PagesConfig",
     "listings.apps.ListingsConfig",
     "realtors.apps.RealtorsConfig",
+    "accounts.apps.AccountsConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -120,7 +121,20 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "btre_project/static")]
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
 
+
+
+
+# messages 
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'danger'
+}
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+
+
