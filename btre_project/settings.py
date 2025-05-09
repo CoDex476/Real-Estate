@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     "listings.apps.ListingsConfig",
     "realtors.apps.RealtorsConfig",
     "accounts.apps.AccountsConfig",
+    "contacts.apps.ContactsConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -122,9 +123,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
 
 
-
-
-# messages 
+# messages
 from django.contrib.messages import constants as messages
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'
@@ -136,5 +135,11 @@ MESSAGE_TAGS = {
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
-
-
+# email config
+# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'abednegodunyah@gmail.com'
+EMAIL_HOST_PASSWORD = "nforyypehitohsxx"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
